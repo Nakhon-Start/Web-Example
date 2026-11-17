@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import AppShell from "@/components/layout/AppShell"; // <-- แก้ Path ตรงนี้
-
+import pkg from "@/package.json";
 export const metadata: Metadata = {
-  title: "Web-AM3",
+  title: `${pkg.name} `,
   description: "Next.js Dashboard Layout",
 };
 

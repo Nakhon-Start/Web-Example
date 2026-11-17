@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
-
+import pkg from "@/package.json";
 // กำหนดเส้นทางที่เป็น Public (ไม่ต้อง Login ก็เข้าได้)
 const PUBLIC_ROUTES = ["/login"];
 
@@ -17,7 +17,7 @@ export function middleware(request: NextRequest) {
   }
 
   // 2. ดึง Token จาก Cookie
-  const token = request.cookies.get("web_am3_token")?.value;
+  const token = request.cookies.get(`${pkg.name}_token`)?.value;
 
   // เช็กว่าหน้าปัจจุบันอยู่ในกลุ่ม Public หรือไม่
   const isPublicRoute = PUBLIC_ROUTES.some(

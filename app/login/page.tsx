@@ -39,7 +39,7 @@ function LoginForm() {
       // สร้าง Token สมมุติและบันทึกลง Cookie เพื่อให้ Middleware อ่านได้
       const mockToken = `mock_jwt_token_${Date.now()}`;
       const maxAge = rememberMe ? 60 * 60 * 24 * 7 : 60 * 60 * 8; // 7 วัน หรือ 8 ชั่วโมง
-      document.cookie = `web_am3_token=${mockToken}; path=/; max-age=${maxAge}; SameSite=Lax`;
+document.cookie = `${pkg.name}_token=${mockToken}; path=/; max-age=${maxAge}; SameSite=Lax`;
 
       setIsLoading(false);
 
