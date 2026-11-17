@@ -1,9 +1,22 @@
 @import "tailwindcss";
 
 :root {
-  --background: #f8fafc;
-  --foreground: #0f172a;
+  --background: #ffffff;
+  --foreground: #171717;
 }
+
+
+
+/* แบบที่ 2: ตารางพิกัดวิศวกรรม + จุดตัดกากบาท (Cyber Engineering Grid) */
+.bg-tech-grid {
+  background-color: #f8fafc;
+  background-image: 
+    url("data:image/svg+xml,%3Csvg width='64' height='64' viewBox='0 0 64 64' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M32 28v8M28 32h8' stroke='%233b82f6' stroke-width='1' stroke-opacity='0.3'/%3E%3C/svg%3E"),
+    linear-gradient(to right, rgba(148, 163, 184, 0.16) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(148, 163, 184, 0.16) 1px, transparent 1px);
+  background-size: 64px 64px, 32px 32px, 32px 32px;
+}
+
 
 @theme inline {
   --color-background: var(--background);
@@ -12,9 +25,8 @@
   --font-mono: var(--font-geist-mono);
 }
 
-/* พื้นหลังรูปภาพ Custom */
+
 .bg-custom-tech {
-  background-color: #f8fafc; /* สีสำรองระหว่างรอรูปโหลด */
   background-image: url("/background.png");
   background-size: cover;
   background-position: center;
@@ -22,8 +34,41 @@
   background-attachment: fixed;
 }
 
+
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* เพิ่มต่อท้ายใน src/app/globals.css */
+@keyframes shrink-bar {
+  from {
+    width: 100%;
+  }
+  to {
+    width: 0%;
+  }
+}
+
+.animate-countdown-bar {
+  animation-name: shrink-bar;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-up {
+  animation: fade-up 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }

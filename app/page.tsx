@@ -20,21 +20,21 @@ export default function HomePage() {
 
       {/* การ์ดสไตล์ Tech Glass */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-        <div className="p-5 bg-white/85 backdrop-blur-md rounded-xl border border-slate-200/90 hover:border-blue-400/60 shadow-sm transition-all">
+        <div className="p-5 bg-white/85 backdrop-blur-md rounded-xl border border-slate-200/90 hover:border-blue-400/60 shadow-sm transition-all animate-fade-up">
           <div className="text-xs font-semibold uppercase tracking-wider text-slate-400">
             Total Nodes
           </div>
           <div className="text-3xl font-bold text-slate-800 mt-2">1,248</div>
         </div>
 
-        <div className="p-5 bg-white/85 backdrop-blur-md rounded-xl border border-slate-200/90 hover:border-cyan-400/60 shadow-sm transition-all">
+        <div className="p-5 bg-white/85 backdrop-blur-md rounded-xl border border-slate-200/90 hover:border-cyan-400/60 shadow-sm transition-all animate-fade-up">
           <div className="text-xs font-semibold uppercase tracking-wider text-slate-400">
             Active Streams
           </div>
           <div className="text-3xl font-bold text-blue-600 mt-2">42</div>
         </div>
 
-        <div className="p-5 bg-white/85 backdrop-blur-md rounded-xl border border-slate-200/90 hover:border-emerald-400/60 shadow-sm transition-all">
+        <div className="p-5 bg-white/85 backdrop-blur-md rounded-xl border border-slate-200/90 hover:border-emerald-400/60 shadow-sm transition-all animate-fade-up">
           <div className="text-xs font-semibold uppercase tracking-wider text-slate-400">
             Uptime Status
           </div>
